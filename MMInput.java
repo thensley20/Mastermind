@@ -7,9 +7,9 @@ public class MMInput {
 
 	private ArrayList<String> letters = new ArrayList<String>(); // usable letters
 	private String letter="1"; // last letter that can be used
-	private String code;
-	private String guess;
-	private int rounds=-1;
+	private static String code;
+	private static String guess;
+	private static int rounds=-1;
 	private Scanner reader = new Scanner(System.in);
 	
 	
@@ -132,18 +132,14 @@ public class MMInput {
 	
 	 private String readCode() {
 		    
-		 	Console console = System.console( );
+		    Console console = System.console( );
 		    System.out.println("Enter code:");
 		    String pass="";
-		    if(reader.hasNext())
+		    
 		    pass = new String(console.readPassword());
 		    
-		    if(!pass.equals(null))
-		    {
 		    return pass;
-		    }
-		    else
-		    return "";
+		  
 		    
 	}
 	
