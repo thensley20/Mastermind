@@ -6,8 +6,8 @@ public class MMCompare {
 			MMInput c = new MMInput( );
 			String g;
 			String code;
-			int exact;
-			int close;
+			int exact=0;
+			int close=0;
 			int rounds;
 			boolean winner = false;
 			
