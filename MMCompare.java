@@ -16,7 +16,7 @@ public class MMCompare {
 			int count[] = new int[4];
 
 			
-
+			// loop that runs the whole game
 			while(!winner) {
 				c.setGuess( );
 				rounds = c.getRemaining( );
@@ -24,12 +24,13 @@ public class MMCompare {
 				code = c.getCode( );
 				exact = 0;
 				close = 0;
+				// initializes count array and the counted array
 				for(int i=0;i<=3;i++){
 					counted[i]=false;
 					count[i]=9;
 				}
 
-
+				// counts the exact number right
 				for(int i=0;i<=3;i++){
 					cL = code.charAt(i);
 					gL= g.charAt(i);
@@ -43,10 +44,10 @@ public class MMCompare {
 					
 
 				
-				
+				// counts if guess is close
 				for(int i = 0; i <= 3; i++) {
 					cL = code.charAt(i);
-					if(!counted[i]){
+					if(!counted[i]){	
 						for(int j = 0; j <= 3; j++) {
 							gL = g.charAt(j);
 							if( !(j==count[0] || j==count[1] || j==count[2] || j==count[3]) && !counted[j]){
