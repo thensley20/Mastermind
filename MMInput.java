@@ -94,8 +94,8 @@ public class MMInput {
 
 		while(!suitable){
 
-			//code = readCode();
-			System.out.println("Enter Code:");
+			code = readCode();
+			//System.out.println("Enter Code:");
 			code= reader.next();
 			if(code.length()>=4)
 			{	
@@ -132,16 +132,13 @@ public class MMInput {
 
 
 
-	private String readCode() {
+	private static String readCode() {
 
 		Console console = System.console( );
 		System.out.println("Enter code:");
-		String pass="";
 
-		pass = new String(console.readPassword());
-
-		return pass;
-
+		return new String(console.readPassword());
+		
 
 	}
 
