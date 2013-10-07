@@ -5,7 +5,7 @@ public class MMCompare {
 		public void compare( ) {
 			MMInput c = new MMInput( );
 			String g;
-			String code;
+			String code="";
 			int exact=0;
 			int close=0;
 			int rounds;
@@ -74,7 +74,7 @@ public class MMCompare {
 			
 				System.out.println("You got " + exact + " exact.");
 				System.out.println("You got " + close + " correct letter but wrong position.");
-
+				System.out.println("Rounds left: " + rounds); 
 				if(exact == 4 || rounds == 0) {
 					winner = true;
 					
@@ -89,6 +89,7 @@ public class MMCompare {
 				System.out.println("You won!");
 			} else {
 				System.out.println("You lose!");	
+				System.out.println("Correct code: " + code);
 			}
 	}
 

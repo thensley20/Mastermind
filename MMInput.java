@@ -96,7 +96,7 @@ public class MMInput {
 
 			code = readCode();
 			//System.out.println("Enter Code:");
-			code= reader.next();
+			//code= reader.next();
 			if(code.length()>=4)
 			{	
 				code = code.substring(0,4);
